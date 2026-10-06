@@ -6,8 +6,8 @@ class Obstacle {
         Obstacle();
         ~Obstacle();
         void Draw();
-        void Update();
-        Rectangle hitbox = {position.x, position.y, (float)image.width, (float)image.height};
+        void Update(bool gameover);
+        Rectangle hitbox;
     private:
         Texture2D image;
         const int def_pos_x = GetScreenWidth() + 100;
